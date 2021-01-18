@@ -1,8 +1,19 @@
+
+
+import 'package:adk_eats/Screens/city_screen.dart';
+import 'package:adk_eats/Screens/featured_screen.dart';
+import 'package:adk_eats/Screens/location_screen.dart';
+import 'package:adk_eats/Screens/restaurants_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:adk_eats/Utilities/reusable_card.dart';
 
 
 class WelcomeScreen extends StatelessWidget {
+
+  static String id = 'welcome_screen';
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +37,11 @@ class WelcomeScreen extends StatelessWidget {
                 Column(
                   children: [
                     ReusableCard(color: Colors.blue,
-                    cardChild: Icon(Icons.my_location, size: 40,),),
+                    cardChild: Icon(Icons.my_location, size: 40,),
+                      onPressed: (){
+                      Navigator.pushNamed(context, LocationPage.id);
+                      },
+                    ),
                     Text("location"),
                   ],
                 ),
@@ -34,15 +49,35 @@ class WelcomeScreen extends StatelessWidget {
                   children: [
                     ReusableCard(color: Colors.blue,
                       cardChild: Icon(Icons.location_city, size: 40,
-                      ),),
+                      ),
+                      onPressed: (){
+
+                      Navigator.pushNamed(context, CityPage.id);
+                      },
+                    ),
                     Text("City"),
                   ],
                 ),
                 Column(
                   children: [
                     ReusableCard(color: Colors.blue,
-                      cardChild: Icon(Icons.fastfood, size: 40,),),
+                      cardChild: Icon(Icons.fastfood, size: 40,),
+                      onPressed: (){
+                      Navigator.pushNamed(context, FoodPage.id);
+                      },
+                    ),
                     Text("Restaurants"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    ReusableCard(color: Colors.blue,
+                      cardChild: Icon(Icons.featured_play_list, size: 40,),
+                      onPressed: (){
+                      Navigator.pushNamed(context, FeaturedPage.id);
+                      },
+                    ),
+                    Text("Featured"),
                   ],
                 ),
               ],

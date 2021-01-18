@@ -1,5 +1,10 @@
+import 'package:adk_eats/Screens/featured_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:adk_eats/Screens/welcome_screen.dart';
+
+import 'Screens/city_screen.dart';
+import 'Screens/location_screen.dart';
+import 'Screens/restaurants_screen.dart';
 
 
 void main() {
@@ -15,7 +20,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WelcomeScreen(),
+        initialRoute: WelcomeScreen.id,
+        routes: {
+          WelcomeScreen.id: (context) => WelcomeScreen(),
+          LocationPage.id: (context) => LocationPage(),
+          CityPage.id: (context) => CityPage(),
+          FoodPage.id: (context) => FoodPage(),
+          FeaturedPage.id: (context) => FeaturedPage()
+
+        }
     );
   }
 }
