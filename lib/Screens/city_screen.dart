@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:adk_eats/Utilities/reusable_card.dart';
 
 
 class CityPage extends StatefulWidget {
@@ -14,10 +15,121 @@ class _CityPageState extends State<CityPage> {
       appBar: AppBar(
         title: Text('City Search'),
       ),
-      body: Column(
-        children: [
-          Text('Find Food by City'),
-        ],
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 50),
+              child: Text('Find Food by City'),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      ReusableCard(color: Colors.blue,
+                      cardChild: Icon(Icons.location_city, size: 40,),
+                        onPressed: (){
+
+                        },
+                      ),
+                      Text('Lake Placid'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      ReusableCard(color: Colors.blue,
+                        cardChild: Icon(Icons.location_city, size: 40,),
+                        onPressed: (){
+
+                        },
+                      ),
+                      Text('Saranac Lake'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      ReusableCard(color: Colors.blue,
+                        cardChild: Icon(Icons.location_city, size: 40,),
+                        onPressed: (){
+
+                        },
+                      ),
+                      Text('Malone'),
+                    ],
+                  ),
+                ],
+
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      ReusableCard(color: Colors.blue,
+                        cardChild: Icon(Icons.location_city, size: 40,),
+                        onPressed: (){
+
+                        },
+                      ),
+                      Text('Massena'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      ReusableCard(color: Colors.blue,
+                        cardChild: Icon(Icons.location_city, size: 40,),
+                        onPressed: (){
+
+                        },
+                      ),
+                      Text('Potsdam'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      ReusableCard(color: Colors.blue,
+                        cardChild: Icon(Icons.location_city, size: 40,),
+                        onPressed: (){
+
+                        },
+                      ),
+                      Text('Canton'),
+                    ],
+                  ),
+                ],
+
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      ReusableCard(color: Colors.blue,
+                        cardChild: Icon(Icons.location_city, size: 40,),
+                        onPressed: (){
+
+                        },
+                      ),
+                      Text('Watertown'),
+                    ],
+                  ),
+
+                ],
+
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
