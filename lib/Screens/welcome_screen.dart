@@ -4,18 +4,33 @@ import 'package:adk_eats/Screens/city_screen.dart';
 import 'package:adk_eats/Screens/featured_screen.dart';
 import 'package:adk_eats/Screens/location_screen.dart';
 import 'package:adk_eats/Screens/restaurants_screen.dart';
+import 'package:adk_eats/Services/location_data.dart';
 import 'package:flutter/material.dart';
 import 'package:adk_eats/Utilities/reusable_card.dart';
 
 
-class WelcomeScreen extends StatelessWidget {
+class WelcomeScreen extends StatefulWidget {
 
   static String id = 'welcome_screen';
 
+  @override
+  _WelcomeScreenState createState() => _WelcomeScreenState();
+}
 
+class _WelcomeScreenState extends State<WelcomeScreen> {
+  var location = UserLocation();
+
+  @override
+  void initState() {
+    super.initState();
+    location.getUserLocation();
+  }
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text("ADK Eats"),

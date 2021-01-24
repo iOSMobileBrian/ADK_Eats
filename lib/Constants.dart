@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:adk_eats/Screens/location_screen.dart';
 
 
-
-
+const kApiKey = 'AIzaSyDMJnNY_gJo4XoEuhTG0Soqz44WIGrr6nw';

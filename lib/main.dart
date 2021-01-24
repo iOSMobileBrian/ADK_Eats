@@ -5,6 +5,7 @@ import 'package:adk_eats/Screens/welcome_screen.dart';
 import 'Screens/city_screen.dart';
 import 'Screens/location_screen.dart';
 import 'Screens/restaurants_screen.dart';
+import 'package:adk_eats/Services/location_data.dart';
 
 
 void main() {
